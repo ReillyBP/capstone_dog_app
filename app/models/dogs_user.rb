@@ -1,0 +1,1 @@
+dogs_user.rb
