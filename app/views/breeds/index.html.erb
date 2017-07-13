@@ -1,0 +1,4 @@
+<h1>Recognized Dog Breeds:</h1>
+<% @breeds.each do |breed| %>
+<p><a href="/breeds/<%= breed.id%>"><%= breed.name %></a></p>
+<%end %>

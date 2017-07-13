@@ -1,0 +1,12 @@
+<h1>Edit Breeder Information</h1>
+<%= form_tag "/breeders/#{@breeder.id}", method: :patch do %>
+<div>Name: <input type= "text" value= "<%= @breeder.name %>" name="name"></div>
+<div>Location: <input type="text" value="<%= @breeder.location %>" name="location"></div>
+<div>Price Range: <input type= "text" value= "<%=@breeder.price %>" name="price"></div>
+<div>Delivery Available: <input type= "text" value= "<%= @breeder.delivery %>" name="delivery"></div>
+<div>Delivery Type: <input type="text" value="<%= @breeder.delivery_type %>" name="delivery_type"></div>
+<div>Past Litters: <input type= "text" value= "<%=@breeder.past_litters %>" name="past_litters"></div>
+<input type= "submit" value="Update">
+<%end%>
+<%= link_to "Back to Homepage", "/home", method: :get%> 
+<%= button_to "Back to Breeder List", "/breeders", method: :get %>

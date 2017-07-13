@@ -1,0 +1,12 @@
+<h1>Edit Info </h1>
+<%= form_tag "/dogs/#{@dog.id}", method: :patch do %>
+<div>Name: <input type= "text" value= "<%= @dog.name %>" name="name_param"></div>
+<div>Breed: <input type="text" value="<%= @dog.breed %>" name="breed_param"></div>
+<div>Age: <input type= "text" value= "<%=@dog.age %>" name="age_param"></div>
+<div>Location: <input type= "text" value= "<%= @dog.location %>" name="location_param"></div>
+<div>Vaccinated: <input type="text" value="<%= @dog.vaccinations %>" name="vaccinations_param"></div>
+<div>Sex: <input type= "text" value= "<%=@dog.sex %>" name="sex_param"></div>
+<div>Breeder: <input type="text" value="<%= @dog.breeder %>" name="breeder_param"></div>
+<input type= "submit" value="Update">
+<%end%>
+<%= link_to "Back to Homepage", "/home", method: :get%> 

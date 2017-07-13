@@ -1,0 +1,8 @@
+<h1><%= @breeder.name %></h1>
+<p>Location: <%= @breeder.location %></p>
+<p>Price Range: <%= @breeder.price %></p>
+<p>Delivery: <%= @breeder.delivery %></p>
+<p>Delivery Options: <%= @breeder.delivery_type%></p>
+<p>Past Litters: <%= @breeder.past_litters %></p>
+<%= button_to "Back to home", "/home", method: :get %>
+<%= button_to "Edit", "/breeders/#{@breeder.id}/edit", method: :get %>

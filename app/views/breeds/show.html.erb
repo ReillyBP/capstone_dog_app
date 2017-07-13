@@ -1,0 +1,12 @@
+<div>
+  <h1><%= @breed.name %></h1>
+  <div>
+    <img style="height:300px;" class="img-responsive" src=<%= @breed.image%>>
+  </div>
+  <p><%= @breed.description %></p>
+</div>
+
+<div>
+<%= button_to "Back to Homepage", "/home", method: :get%> 
+<%= button_to "Back Breed List", "/breeds", method: :get%>
+</div> 

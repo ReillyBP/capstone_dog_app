@@ -1,4 +1,5 @@
 class DogsController < ApplicationController
+  before_action :authenticate_user!, except: :index
   def index
   end
   def show
@@ -7,11 +8,23 @@ class DogsController < ApplicationController
   end
   def update
     @dog = Dog.find_by(id: params[:id])
+    @dog.update(
+      name: params[:name],
+      age: params[:age],
+      location: params[:location],
+      vaccinations: params[:vaccinations],
+      sex: params[:sex],
+      image: params[:image],
+      breeder: params[:breeder],
+      image: params[:image])
+
+      flash[:success] = "You have successfully updated this dog"
+      redirect_to "/dogs/#{@dog.id}"
     # render "edit.html.erb"
   end
   def edit
     @dog = Dog.find_by(id: params[:id])
-    render "show.html.erb"
+    render "edit.html.erb"
   end
   def new
     @dog = Dog.new
@@ -34,9 +47,9 @@ class DogsController < ApplicationController
       image: params[:image],
       breeder: params[:breeder])
     if dog.save
-      session[:user_id] = user.user_id
+      DogsUser.create(dog_id: dog.id, user_id: current_user.id)
       flash[:success] = "You have successfully added this dog to your profile"
-      redirect_to "/dogs/#{@dog.id}"
+      redirect_to "/dogs/#{dog.id}"
     else
       flash[:warning] = "Invalid entry. Please sign in and try again"
       redirect_to "/users/sign_up"

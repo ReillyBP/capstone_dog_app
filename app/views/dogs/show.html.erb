@@ -1,0 +1,10 @@
+<h1><%= @dog.name %></h1>
+<img style="height:300px;" class="img-responsive" src=<%= @dog.image%>>
+<p>Breed: <%= @dog.breed %></p>
+<p>Age: <%= @dog.age %></p>
+<p>Location: <%= @dog.location %></p>
+<p>Vaccinated: <%= @dog.vaccinations %></p>
+<p>Sex: <%= @dog.sex%></p>
+<p>Breeder: <%= @dog.breeder %></p>
+<%= button_to "Back to home", "/home", method: :get %>
+<%= button_to "Edit", "/dogs/#{@dog.id}/edit", method: :get %>

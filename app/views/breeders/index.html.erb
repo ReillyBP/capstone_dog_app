@@ -1,0 +1,22 @@
+<% if current_user %>
+  <h1><%= current_user.name%>:</h1>
+  <h3>Here is a list of all of our affiliated breeders:</h3>
+  <% @breeders.each do |breeder| %> 
+  <div class="row">
+      <div class="col-md-4">
+        <div class="well">
+          <a href="/breeders/<%=breeder[:id]%>"><%= breeder.name %></a>
+          <img style="height:300px;" class="img-responsive" src=<%= breeder.image%>>
+          <p><%= breeder.location %></p>
+          <p><%= breeder.price %></p>
+          <p><%= breeder.delivery %></p>
+          <p><%= breeder.delivery_type %></p>
+          <%= button_to "Delete", "/breeders/#{breeder.id}", method: :delete %>
+          <%= button_to "Edit", "/breeders/#{breeder.id}/edit", method: :get %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+<% else %>
+  <h2>Welcome!</h2>
+<% end %>

@@ -6,4 +6,7 @@ Rails.application.routes.draw do
       }
   root to: "dogs#index"
   get "/home", to: "dogs#index"
+  resources :dogs
+  resources :breeds
+  resources :breeders
 end
