@@ -1,0 +1,8 @@
+<h1>Edit Review </h1>
+<%= form_tag "/reviews/#{@review.id}", method: :patch do %>
+<div>Subject: <input type= "text" value= "<%= @review.subject %>" name="subject"></div>
+<div>Review: <input type="text" value="<%= @review.body %>" name="body"></div>
+<div>Votes: <input type= "text" value= "<%=@review.vote %>" name="vote"></div>
+<input type= "submit" value="Update">
+<%end%>
+<%= link_to "Back to Homepage", "/home", method: :get%> 

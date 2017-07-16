@@ -1,5 +1,5 @@
 class BreedsController < ApplicationController
-   before_action :authenticate_user!
+before_action :authenticate_user!
   def index
     @breeds = Breed.all
     render "index.html.erb"

@@ -1,5 +1,6 @@
 class BreedersController < ApplicationController
   before_action :authenticate_user!
+  before_action :authenticate_admin!, except: [:index, :show]
   def index
     @breeders = Breeder.all
     render "index.html.erb"
@@ -17,9 +18,13 @@ class BreedersController < ApplicationController
       delivery_type: params[:delivery_type],
       image: params[:image],
       past_litters: params[:past_litters])
-
+    if breeder.update
       flash[:success] = "You have successfully updated this breeder"
       redirect_to "/breeders/#{@breeder.id}"
+    else
+      flash[:warning] = "Breeder information was not created for the following reasons: #{@breeder.full_messages.join(",")}"
+      render "new.html.erb"
+    end  
   end
   def edit
     @breeder = Breeder.find_by(id: params[:id])
@@ -45,6 +50,9 @@ class BreedersController < ApplicationController
     if breeder.save
       flash[:success] = "You have successfully added this breeder to your profile"
       redirect_to "/breeders/#{breeder.id}"
+    else
+      flash[:warning] = "Breeder information was not created for the following reasons: #{@breeder.full_messages.join(",")}"
+      render "new.html.erb"
     end
   end
 end

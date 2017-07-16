@@ -1,0 +1,8 @@
+<h1>Enter Your Review Below:</h1>
+<%= form_tag "/reviews", method: :post do %>
+<div>Subject: <input type= "text" value= "<%= @review.subject %>" name="subject"></div>
+<div>Review: <input type="text" value="<%= @review.body %>" name="body"></div>
+<input type= "submit" value="Post Review">
+<%end%>
+
+<!-- where to add up/down votes, and where to associate it with user_id (postico?) -->

@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
   has_many :dogs_users
   has_many :dogs, through: :dogs_users
+  has_many :reviews
 end

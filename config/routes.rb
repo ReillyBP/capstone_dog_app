@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   resources :dogs
   resources :breeds
   resources :breeders
+  post "/reviews/:id/upvote", to: "reviews#upvote"
+  post "/reviews/:id/downvote", to: "reviews#downvote"
+  resources :reviews
 end

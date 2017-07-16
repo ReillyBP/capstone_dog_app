@@ -1,0 +1,5 @@
+<h1><%= @review.subject %></h1>
+<p>Subject: <%= @review.subject %></p>
+<p>Review: <%= @review.body %></p>
+<p>Votes: <%= @review.vote %></p>
+<%= button_to "Back to home", "/home", method: :get %>
