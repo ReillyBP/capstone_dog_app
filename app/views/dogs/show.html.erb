@@ -1,5 +1,6 @@
 <h1><%= @dog.name %></h1>
-<img style="height:300px;" class="img-responsive" src=<%= @dog.image%>>
+<img style="height:300px;" class="img-responsive" src=<%= @dog.image.url %>>
+<%= video_tag Video.first.video.url, :controls => true %>
 <p>Breed: <%= @dog.breed %></p>
 <p>Age: <%= @dog.age %></p>
 <p>Location: <%= @dog.location %></p>

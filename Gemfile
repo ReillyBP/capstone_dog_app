@@ -12,6 +12,8 @@ gem 'rails', '~> 5.0.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
+gem 'paperclip'
+gem 'paperclip-av-transcoder'
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -32,6 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'faker'
+gem 'yelp'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'unirest'

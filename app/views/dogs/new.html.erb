@@ -1,5 +1,5 @@
 <h1>Enter New Dog Information</h1>
-<%= form_tag "/dogs", method: :post do %>
+<%= form_tag "/dogs", method: :post, multipart: true do %>
 <div>Name: <input type= "text" value= "<%= @dog.name %>" name="name"></div>
 <div>Breed: <input type="text" value="<%= @dog.breed %>" name="breed"></div>
 <div>Age: <input type= "text" value= "<%=@dog.age %>" name="age"></div>
@@ -7,5 +7,14 @@
 <div>Vaccinated: <input type="text" value="<%= @dog.vaccinations %>" name="vaccinations"></div>
 <div>Sex: <input type= "text" value= "<%=@dog.sex %>" name="sex"></div>
 <div>Breeder: <input type="text" value="<%= @dog.breeder %>" name="breeder"></div>
+  <div>
+    <%= label_tag :image %>
+    <%= file_field_tag :image %>
+  </div>
+  <div>
+    <%= label_tag :video %>
+    <%= file_field_tag :video %>
+  </div>
+
 <input type= "submit" value="Add Dog">
 <%end%>

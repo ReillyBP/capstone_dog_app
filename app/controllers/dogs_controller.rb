@@ -14,7 +14,6 @@ class DogsController < ApplicationController
       location: params[:location],
       vaccinations: params[:vaccinations],
       sex: params[:sex],
-      image: params[:image],
       breeder: params[:breeder],
       image: params[:image])
 
@@ -47,6 +46,7 @@ class DogsController < ApplicationController
       image: params[:image],
       breeder: params[:breeder])
     if dog.save
+      v = Video.create(video: params[:video], dog_id: dog.id)
       DogsUser.create(dog_id: dog.id, user_id: current_user.id)
       flash[:success] = "You have successfully added this dog to your profile"
       redirect_to "/dogs/#{dog.id}"

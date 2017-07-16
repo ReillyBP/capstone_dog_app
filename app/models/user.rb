@@ -6,4 +6,6 @@ class User < ApplicationRecord
   has_many :dogs_users
   has_many :dogs, through: :dogs_users
   has_many :reviews
+  has_many :images
+  has_many :videos
 end

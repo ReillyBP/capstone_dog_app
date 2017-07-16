@@ -1,3 +1,4 @@
 class Breeder < ApplicationRecord
-  # has_many 
+  has_many :images
+  has_many :videos
 end
