@@ -59,12 +59,12 @@ class ReviewsController < ApplicationController
     review = Review.find_by(id: params[:id])
     review.vote += 1
     review.save
-    redirect_to "reviews/#{review.id}"
+    redirect_to "/reviews/"
   end
   def downvote
     review = Review.find_by(id: params[:id])
     review.vote -= 1
     review.save
-    redirect_to "reviews/#{review.id}"
+    redirect_to "/reviews/"
   end
 end

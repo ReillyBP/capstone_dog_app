@@ -46,7 +46,7 @@ class DogsController < ApplicationController
       image: params[:image],
       breeder: params[:breeder])
     if dog.save
-      v = Video.create(video: params[:video], dog_id: dog.id)
+      v = Video.create(video: params[:video], dog_id: dog.id) if params[:video]
       DogsUser.create(dog_id: dog.id, user_id: current_user.id)
       flash[:success] = "You have successfully added this dog to your profile"
       redirect_to "/dogs/#{dog.id}"
@@ -55,4 +55,10 @@ class DogsController < ApplicationController
       redirect_to "/users/sign_up"
     end
   end
+
+  def puppycam
+    @video_link = ["https://www.youtube.com/embed/Gh1ggRitrpw","https://www.youtube.com/embed/tNMfBs6kKK0","https://www.youtube.com/embed/-CpDQ6BT5mk","https://www.youtube.com/embed/PPmnFbpnvMQ","https://www.youtube.com/embed/RTfKYDIhlVE"].sample
+    render "puppycam.html.erb"
+  end
+
 end

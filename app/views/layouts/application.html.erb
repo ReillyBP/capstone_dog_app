@@ -1,69 +1,134 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Wag and Bone</title>
-    <%= csrf_meta_tags %>
+    <html class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<title>Wag and Bone</title>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+
+<meta name="description" content="">
+<meta content="yes" name="apple-mobile-web-app-capable" />
+<meta name="viewport" content="minimum-scale=1.0, width=device-width, maximum-scale=1, user-scalable=no" />
+
+<!--=================================
+Style Sheets
+=================================-->
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/css/pixeden-fonts.css">
+<link rel="stylesheet" type="text/css" href="/css/flexslider.css">
+<link rel="stylesheet" type="text/css" href="/css/prettyPhoto.css">
+<link rel="stylesheet" type="text/css" href="/css/animations.css">
+<link rel="stylesheet" type="text/css" href="/css/dl-menu.css">
+<link rel="stylesheet" href="/css/main.css">
+
+<script src="/js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
+</head>
 
   <body>
-  <nav class="navbar navbar-default navbar-inverse">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="/home">Home</a>
-    </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="/dogs/new">Create Doggle <span class="sr-only">(current)</span></a></li>
-         <!--  -->
+<!--======================
+Preloading Splash Screen
+=======================-->
+ <div id="jSplash">
+ </div>
+
+<!--========================================
+Body Content
+===========================================-->
+
+
+<div class="quick-access">
+    <div class=" container">
+    
+        <ul class="getintouch">
+          <li>Questions or Concerns? Call:</li>
+            <li>
+              <a href="tel:18001231234">
+                 <span class="livicon" data-name="tablet" data-onparent="true" data-size="20"></span>1.800.123.1234
+              </a>
+            </li>
+            <li>
+              <a href="mailto:rberginpugh@gmail.com">
+                 <span class="livicon" data-name="mail" data-onparent="true" data-size="20"></span>rberginpugh@gmail.com
+              </a>
+            </li>
+
+        </ul>
+        
+        <ul class="social">
+            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
+            <li ><a href="#"><span class="fa fa-twitter"></span></a></li>
+            <li ><a href="#"><span class="fa fa-pinterest"></span></a></li>
+            <li ><a href="#"><span class="fa fa-linkedin"></span></a></li>
+            <li ><a href="#"><span class="fa fa-flickr"></span></a></li>
+            <li ><a href="#"><span class="fa fa-youtube"></span></a></li>
+            <li ><a href="#"><span class="fa fa-google-plus"></span></a></li>
+        </ul>
+    
+    </div>
+</div>
+<!--=================================
+header
+=================================-->
+<header>
+  <nav id="sticktop" class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/home"><img src="/img/basic/logo-nav.png" alt="/home"></a>
+      </div>
+        
+      <div id="dl-menu" class="xv-menuwrapper responsive-menu">
+          <button class="dl-trigger">Open Menu</button>
+          <div class="clearfix"></div>
+          <ul class="dl-menu">
+              <li href="/home"><a>Home</a>
+                    <!-- add anything here class="parent-active" highlights the section of the menu to blue-->
+              </li>
+              <li class="parent"><a href="#">Main Menu</a>
+                  <ul class="lg-submenu">
+                  <li class="parent"><a href="#">Profile</a>
+                    <ul class="lg-submenu">
+                      <li><a href="">Edit Profile</a></li>
+                  <li class="parent"><a href="/dogs/new">Add a New Dog</a>
+                  <li class="parent"><a href="/puppycam">Live Puppycam</a>
+                          
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+
+
+              <li class="parent"><a href="/breeds">Breeds</a>
+                  <ul class="lg-submenu">
+                    <li href="/breeds"><a>View All</a>
+                  <!-- add breeds - maybe make an option to filter -->
+                  </ul>
+              <li class="parent"><a href="/breeders">Breeders</a>
+                  <ul class="lg-submenu">
+                    <li href="/breeders"><a>View All</a>
+                  <!-- add breeds - maybe make an option to filter -->
+                  </ul>
+             <li class="parent"><a href="/reviews">Reviews</a>    
+  
+              <li class="parent"><a href="#">About</a>
+                  <ul class="lg-submenu"> 
+                  <li><a>About Us</a>
+                  <li><a>Contact</a>
+              </li>
+                    
+                  </ul>
+              </li>
           </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Menu<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-          <li><a href="/home">Home</a></li>
-          <li role="separator" class="divider"></li>
-            <li><a href="/breeds">View All Breeds</a></li>
-            <li><a href="/reviews/">All Reviews</a></li>
-            <%if current_user %>
-            <li><a href="/dogs/new">Add New Doggo</a></li>
-            <li><a href="/breeders">View All Breeders</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="/reviews/">Your Past Reviews</a></li>
-            <li><a href="/reviews/new">Write a Review</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="/users/sign_out">Logout</a></li>
-            <% else %>
-            <li><a href="/users/sign_in">Login</a></li>
-            <li><a href="/users/sign_up">Sign Up</a></li>
-            <% end %>
-            
-            
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+      </div><!-- /dl-menuwrapper -->
+    </div>
+  </nav>
+</header>
   <div class="container">
   <!-- end of BSNav -->
   <%flash.each do |name, message| %>
@@ -72,5 +137,100 @@
   </button></div>
   <% end %>
     <%= yield %>
-  </body>
+    </div>
+<!--=================================
+Footer
+=================================-->
+<footer>
+  <section class="widgets-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-xs-12">
+          <a href="#" class="logo-footer"><img src="/img/basic/logo-nav.png" alt=""/></a>
+          <p>Donec at malesuada arcu. Sed interdum tortor id odio elementum. Donec tempor tellus elementum</p>
+        </div>
+        <!--col-->
+        
+        <div class="col-md-4 col-xs-12">
+          <h3>latest tweets</h3>
+          <div id="tweet-slider" class="flexslider latest-tweet"><i class="fa fa-twitter"></i></div>
+        </div>
+        <!--col-->
+        <!--col-->
+        
+        <div class="col-md-4 col-xs-12">
+          <h3>contact</h3>
+          <ul class="contact-info">
+            <li><a href="#">
+              <i class="livicon" data-name="location" data-onparent="true" data-size="22"></i>
+                  150 Broadway, New York
+                  NY, 10038
+                </a>
+            </li>
+            <li><a href="#">
+              <i class="livicon" data-name="phone" data-onparent="true" data-size="22"></i>
+                  1.800.321.9876
+                </a>
+            </li>
+            <li><a href="#">
+              <i class="livicon" data-name="mail" data-onparent="true" data-size="22"></i>
+                  rberginpugh@gmail.com
+                 </a>
+             </li>
+          </ul>
+        </div>
+        <!--col--> 
+      </div>
+      <!--row--> 
+    </div>
+  </section>
+  <div class="privacy-rights">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-xs-12">
+          <div class="rights"> ©2017 Reilly BP. All rights reserved. </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+          <ul class="rights">
+            <li><a href="#">Disclaimer |</a></li>
+            <li><a href="#">Privacy Policy |</a></li>
+            <li><a href="#">Terms of Use</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/js/jquery-1.10.1.min.js"></script>
+<script src="/js/raphael-min.js"></script>
+<script src="/js/liveicon.js"></script>
+<script src="/js/jpreloader.min.js"></script> 
+<script src="/js/bootstrap.min.js"></script> 
+<script src="/js/jquery.waitforimages.js"></script> 
+<script src="/js/jquery.carouFredSel-6.2.1-packed.js"></script> 
+<script src="/js/jquery.flexslider-min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script> 
+<script src="/js/jquery.prettyPhoto.js"></script> 
+<script src="/js/jflickrfeed.min.js"></script> 
+<script src="/js/isotope.js"></script> 
+<script src="/js/jquery.stellar.min.js"></script> 
+<script src="/js/css3-animate-it.js"></script> 
+<script src="/js/jquery.dlmenu.js"></script>
+<script src="/js/jquery.sticky.js"></script>
+<script src="/js/tweetie.min.js"></script>
+<script src="/js/masonry.pkgd.min.js"></script>
+<script src="/js/jquery.countdown.min.js"></script>
+<script src="/js/main.js"></script>   
+<script>
+$('body').jpreLoader({
+    splashID: "#jSplash",
+    loaderVPos: '0%',
+    autoClose: true,
+});
+/*=========Place Google Tracker Code here===========*/
+</script> 
+
+</body>
+
+
 </html>
