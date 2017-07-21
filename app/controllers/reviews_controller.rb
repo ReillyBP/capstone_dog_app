@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
   before_action :authenticate_user!, except: :destroy
-  before_action :authenticate_admin!, only: [:destroy]
+  # before_action :authenticate_admin!, only: [:destroy]
   def index
     @reviews = Review.all
     render "index.html.erb"
@@ -13,12 +13,10 @@ class ReviewsController < ApplicationController
   end
   def update
     @review = Review.find_by(id: params[:id])
-    @review.update(
+    @review.assign_attributes(
       subject: params[:subject],
-      user_id: params[:user_id],
-      body: params[:body],
-      vote: params[:vote])
-    if review.update
+      body: params[:body])
+    if @review.save
       flash[:success] = "You have successfully updated this review"
       redirect_to "/reviews/#{@review.id}"
     else
@@ -36,8 +34,15 @@ class ReviewsController < ApplicationController
   end
   def destroy
     @review = Review.find_by(id: params[:id])
-    @review.destroy
-    flash[:danger] = "This review has been successfully deleted"
+    # if you are an admin or the reviewer's owner, destroy. else don't
+    if current_user.admin || @review.user == current_user
+      @review.destroy
+      flash[:danger] = "This review has been successfully deleted"
+      redirect_to "/reviews"
+    else
+      flash[:danger] = "This ain't yo review ho"
+      redirect_to "/reviews"
+    end
   end
   def create
     review = Review.new(

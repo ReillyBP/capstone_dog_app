@@ -6,7 +6,7 @@
     <% review_slice.each do |review| %>
     <div class="col-md-4">
       <div class="well">
-        <a href="/review/"><%= review.subject %></a>
+        <a href="/reviews/<%=review.id %>"><%= review.subject %></a>
         <p><%= review.body %></p>
         <p><%= review.vote %></p>
         <%= button_to "Delete", "/reviews/#{review.id}", method: :delete %>
@@ -24,15 +24,18 @@
     <% review_slice.each do |review| %>
       <div class="col-md-4">
         <div class="well">
-          <a href="/review/"><%= review.subject %></a>
+          <a href="/reviews/<%= review.id %>"><%= review.subject %></a>
           <p><%= review.body %></p>
           <p><%= review.vote %></p>
+            <% if current_user.admin || review.user == current_user %>
           <%= button_to "Delete", "/reviews/#{review.id}", method: :delete %>
           <%= button_to "Edit", "/reviews/#{review.id}/edit", method: :get %>
+          <% else %>
           <% if current_user != review.user %>
             <%= button_to "Upvote", "/reviews/#{review.id}/upvote" %>
             <%= button_to "Downvote", "/reviews/#{review.id}/downvote" %>
           <% end %>
+         <% end %> 
         </div>
       </div>
     <% end %>
