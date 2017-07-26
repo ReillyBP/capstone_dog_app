@@ -33,7 +33,7 @@ Table OF Contents
 	
 
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family:'Walter Turncoat', cursive;
 	font-size: 15px;
 	line-height: 28px;
 	color: #777c7f;
@@ -67,7 +67,7 @@ body {
 	width: 100%;
 	height: 30px;
 }
-#jpreBar { background: #2bb7ff; }
+#jpreBar { background: #7cea15; }
 #jprePercentage {
 	color: #000;
 	font-size: 20px;
@@ -78,8 +78,8 @@ body {
 }
 #jpreButton {
 	border-radius: 2px;
-	background: #2bb7ff;
-	color: #fff;
+	background: #fff;
+	color: black;
 	height: auto !important;
 	display: inline-block;
 	padding: 10px 40px;
@@ -140,39 +140,39 @@ h1, h2, h3, h4, h5, h6, p {
 	color: #fff;
 }
 h1 {
-	color: #fff;
+	color: black;
 	font-weight: 300;
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-size: 80px;
-	font-family: 'Raleway', sans-serif;
+	font-family:'Walter Turncoat', cursive;
 }
 h2 {
 	color: #13212d;
 	font-weight: 300;
-	text-transform: uppercase;
+	text-transform: none;
 	font-size: 40px;
 	line-height: 40px;
-	font-family: 'Raleway', sans-serif;
+	font-family:'Walter Turncoat', cursive;
 }
 h3 {
 	font-size: 22px;
-	color: #2bb7ff;
-	font-family: 'Raleway', sans-serif;
-	text-transform: uppercase;
+	color: #56616c;
+	font-family:'Walter Turncoat', cursive;
+	text-transform: none;
 }
 h5 {
 	color: #13212d;
 	font-size: 30px;
 	font-weight: 300;
 	text-transform: uppercase;
-	font-family: 'Raleway', sans-serif;
+	font-family:'Walter Turncoat', cursive;
 }
 h4, footer .widgets-area h3 {
 	color: #13212d;
 	font-size: 18px;
 	font-weight: 600;
 	text-transform: uppercase;
-	font-family: 'Raleway', sans-serif;
+	font-family:'Walter Turncoat', cursive;
 }
 input[type="checkbox"] { outline: none !important; }
 input[type="checkbox"] + label {
@@ -333,8 +333,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e466c', end
 	-o-box-shadow: 0px 1px 2px rgba(0, 0, 0, .15);
 	box-shadow: 0px 1px 2px rgba(0, 0, 0, .15);
 }
-.dl-menuwrapper button { background: #2bb7ff; }
-.dl-menuwrapper button:hover, .dl-menuwrapper button.dl-active, .dl-menuwrapper ul { background: #2bb7ff; }
+.dl-menuwrapper button { background: #9bbaca; }
+.dl-menuwrapper button:hover, .dl-menuwrapper button.dl-active, .dl-menuwrapper ul { background: #cedde5; }
 .dl-menuwrapper {
 	position: absolute;
 	top: 50%;
@@ -379,7 +379,7 @@ ul.navbar-nav {
 	text-align: center;
 }
 .navbar-default {
-	background: #fff;
+	background: #CEDDE5;
 	border: none;
 }
 .navbar-nav > li {
@@ -388,7 +388,7 @@ ul.navbar-nav {
 	position: relative;
 }
 .navbar-nav > li.active {
-	background: #2bb7ff;
+	background: #273746;
 	color: #fff !important;
 	position: relative;
 }
@@ -422,7 +422,7 @@ ul.navbar-nav {
 }
 .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus { background: none; }
 .navbar-default ul.dropdown-menu {
-	background: #2bb7ff;
+	background: #CEDDE5;
 	min-width: 140px;
 	top: 100%;
 	padding: 0;
@@ -478,14 +478,14 @@ a.navbar-brand img { padding-right: 15px; }
 	position: absolute;
 	left: 0;
 	bottom: -41px;
-	color: #2bb7ff;
-	font-size: 20px;
+	color: #9bbaca;
+	font-size: 25px;
 }
 .xv-menuwrapper .dl-menu > li.active > a { color: #fff; }
 .xv-menuwrapper .dl-menu > li > a {
 	padding: 0 20px;
 	display: block;
-	font-family: 'Raleway', sans-serif;
+	font-family:'Walter Turncoat', cursive;
 	font-size: 16px;
 	color: #000000;
 	line-height: 90px;
@@ -580,7 +580,8 @@ a.navbar-brand img { padding-right: 15px; }
 	-ms-transform: translateY(0);
 }
 .xv-menuwrapper .dl-menu > li.parent > ul > li, .xv-menuwrapper .dl-menu > li.parent > ul > li.parent ul li {
-	font-family: 'Raleway', sans-serif;
+	font-family:'Walter Turncoat', cursive;
+
 	display: block;
 	list-style: none;
 	border-top: 1px solid #000;
@@ -1271,7 +1272,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2063a7', end
 }
 .portfolio-detail li {
 	font-size: 16px;
-	font-family: raleway;
+	font-family:'Walter Turncoat', cursive;
 	color: #666666;
 	display: inline-block;
 }
@@ -1363,7 +1364,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2063a7', end
 .blog-masonry .article-post .post-info {
 	font-size: 13px;
 	line-height: 28px;
-	font-family: raleway;
+	font-family:'Walter Turncoat', cursive;
 	font-weight: 300;
 }
 .blog-masonry .article-post p {
@@ -2063,11 +2064,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#494d6f', end
 =========================== */
 .widgets-area {
 	position: relative;
-	background: #13212d;
+	background: #fff;
 	font-size: 14px;
-	color: #818a91;
+	color: #56616c;
 	font-weight: 400;
-	border-top: 4px solid #0e1821;
+	border-top: 4px solid #fff;
 	padding-top: 42px;
 	padding-bottom: 70px;
 }
@@ -2086,16 +2087,16 @@ footer:before {
 	content: '';
 	position: absolute;
 	top: 0;
-	left: 50%;
-	margin-left: -37px;
-	width: 74px;
-	height: 4px;
-	background: #6abbd9;
-	border-radius: 2px;
+	/*left: 50%;*/
+	/*margin-left: -37px;*/
+	width: 100%;
+	height: 7px;
+	background: #CEDDE5;
+	border-radius: 5px;
 	z-index: 99;
 }
 footer .widgets-area h3 {
-	color: #fff;
+	color: #56616c;
 	font-weight: bold;
 	padding-bottom: 12px;
 }
@@ -2135,13 +2136,14 @@ footer .widgets-area h3 {
 .footer-meta { margin-left: 16px; }
 .privacy-rights {
 	font-size: 14px;
-	color: #56616c;
+	color: black;
 	font-weight: 400;
-	background: #0e1821;
+	background: #CEDDE5;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }
 footer a { color: #56616c; }
+.footer-black { color: black; }
 footer .privacy-rights li { display: inline-block; }
 .privacy-rights ul { text-align: right; }
 /* ============================

@@ -1,22 +1,24 @@
 <% if current_user %>
-  <h1>Welcome <%= current_user.name%>!</h1>
-  <h3>Below is a list of all of your dogs:</h3>
-  <% current_user.dogs.each do |dog| %> 
-  <div class="row">
-      <div class="col-md-4">
-        <div class="well">
-          <a href="/dogs/<%=dog[:id]%>"><%= dog.name %></a>
-          <img style="height:300px;" class="img-responsive" src=<%= dog.image%>>
-          <p><%= dog.breed %></p>
-          <p><%= dog.age %></p>
-          
-          <%= button_to "Delete", "/dogs/#{dog.id}", method: :delete %>
-          <%= button_to "Edit", "/dogs/#{dog.id}/edit", method: :get %>
-          <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+  <div class="container">
+    <div class="row">
+      <h1>Welcome <%= current_user.name%>!</h1>
+      <h3>Below is a list of all of your dogs:</h3>
+      <% current_user.dogs.each do |dog| %> 
+        <div class="col-md-4">
+          <div class="well">
+            <a href="/dogs/<%=dog[:id]%>"><%= dog.name %></a>
+            <img style="height:300px;" class="img-responsive" src=<%= dog.image%>>
+            <p><%= dog.breed %></p>
+            <p><%= dog.age %></p>
+
+            <%= button_to "Delete", "/dogs/#{dog.id}", method: :delete %>
+            <%= button_to "Edit", "/dogs/#{dog.id}/edit", method: :get %>
+            <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 <% else %>
   <h2>Welcome!</h2>
   <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>

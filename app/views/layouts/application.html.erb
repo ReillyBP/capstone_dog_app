@@ -17,6 +17,7 @@
 Style Sheets
 =================================-->
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="/css/pixeden-fonts.css">
@@ -42,37 +43,6 @@ Preloading Splash Screen
 Body Content
 ===========================================-->
 
-
-<div class="quick-access">
-    <div class=" container">
-    
-        <ul class="getintouch">
-          <li>Questions or Concerns? Call:</li>
-            <li>
-              <a href="tel:18001231234">
-                 <span class="livicon" data-name="tablet" data-onparent="true" data-size="20"></span>1.800.123.1234
-              </a>
-            </li>
-            <li>
-              <a href="mailto:rberginpugh@gmail.com">
-                 <span class="livicon" data-name="mail" data-onparent="true" data-size="20"></span>rberginpugh@gmail.com
-              </a>
-            </li>
-
-        </ul>
-        
-        <ul class="social">
-            <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-            <li ><a href="#"><span class="fa fa-twitter"></span></a></li>
-            <li ><a href="#"><span class="fa fa-pinterest"></span></a></li>
-            <li ><a href="#"><span class="fa fa-linkedin"></span></a></li>
-            <li ><a href="#"><span class="fa fa-flickr"></span></a></li>
-            <li ><a href="#"><span class="fa fa-youtube"></span></a></li>
-            <li ><a href="#"><span class="fa fa-google-plus"></span></a></li>
-        </ul>
-    
-    </div>
-</div>
 <!--=================================
 header
 =================================-->
@@ -80,7 +50,7 @@ header
   <nav id="sticktop" class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/home"><img src="/img/basic/logo-nav.png" alt="/home"></a>
+        <a class="navbar-brand" href="/home"><img class="bone" src="./assets/bone.png" alt="/home"></a>
       </div>
         
       <div id="dl-menu" class="xv-menuwrapper responsive-menu">
@@ -129,7 +99,7 @@ header
     </div>
   </nav>
 </header>
-  <div class="container">
+  <div class="container body-container">
   <!-- end of BSNav -->
   <%flash.each do |name, message| %>
   <div class="alert alert-<%= name %> alert-dismissible" role= "alert"> <%= message %> <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -146,14 +116,14 @@ Footer
     <div class="container">
       <div class="row">
         <div class="col-md-4 col-xs-12">
-          <a href="#" class="logo-footer"><img src="/img/basic/logo-nav.png" alt=""/></a>
-          <p>Donec at malesuada arcu. Sed interdum tortor id odio elementum. Donec tempor tellus elementum</p>
+          <!-- where you removed the logo originally -->
+          <p>Life is better with a dog. Don't we all want someone to greet us everyday at the door?</p>
         </div>
         <!--col-->
         
-        <div class="col-md-4 col-xs-12">
-          <h3>latest tweets</h3>
-          <div id="tweet-slider" class="flexslider latest-tweet"><i class="fa fa-twitter"></i></div>
+        <div class="col-md-4 col-xs-12 text-center">
+          <h3>WAG and Bone</h3>
+          <a href="#" class="logo-footer"><img class= "paw" src="./assets/paw.png" alt=""/></a>
         </div>
         <!--col-->
         <!--col-->
@@ -192,9 +162,9 @@ Footer
         </div>
         <div class="col-md-6 col-xs-12">
           <ul class="rights">
-            <li><a href="#">Disclaimer |</a></li>
-            <li><a href="#">Privacy Policy |</a></li>
-            <li><a href="#">Terms of Use</a></li>
+            <li><a class="footer-black" href="#">Disclaimer |</a></li>
+            <li><a class="footer-black" href="#">Privacy Policy |</a></li>
+            <li><a class="footer-black" href="#">Terms of Use</a></li>
           </ul>
         </div>
       </div>

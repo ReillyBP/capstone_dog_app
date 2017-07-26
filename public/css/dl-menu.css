@@ -47,7 +47,8 @@
 	font-size: 16px;
 	line-height: 20px;
 	font-weight: 300;
-	color: #fff;
+	color: black;
+	background-color: #fff; 
 	outline: none;
 }
 .no-touch .dl-menuwrapper li a:hover { background: rgba(255,248,213,0.1); }
@@ -91,6 +92,7 @@
 	pointer-events: auto;
 	-webkit-transform: translateY(0px);
 	transform: translateY(0px);
+	box-shadow: 2px 3px 18px 0px rgba(230, 230, 230, 1);
 }
 /* Hide the inner submenus */
 .dl-menuwrapper li .dl-submenu { display: none; }

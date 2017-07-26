@@ -33,7 +33,7 @@ class DogsController < ApplicationController
     @dog = Dog.find_by(id: params[:id])
     @dog.destroy
     flash[:danger] = "This dog has been successfully deleted from your profile"
-    # redirect_to "/"
+    redirect_to "/home"
   end
   def create
     dog = Dog.new(
