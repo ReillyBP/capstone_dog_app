@@ -1,44 +1,67 @@
 <% if current_user %>
-  <h1>Welcome <%= current_user.name%>!</h1>
-  <h3>Below is a list of all of your reviews:</h3>
-  <% current_user.reviews.each_slice(3) do |review_slice| %> 
-  <div class="row">
-    <% review_slice.each do |review| %>
-    <div class="col-md-4">
-      <div class="well">
-        <a href="/reviews/<%=review.id %>"><%= review.subject %></a>
-        <p><%= review.body %></p>
-        <p><%= review.vote %></p>
-        <%= button_to "Delete", "/reviews/#{review.id}", method: :delete %>
-        <%= button_to "Edit", "/reviews/#{review.id}/edit", method: :get %>
-      </div>
+<h1>Welcome <%= current_user.name%>!</h1>
+<h3>Below is a list of all of your reviews:</h3>
+
+
+<div class="container">
+  <div class="article blog-masonry">
+    <div class="row">
+      <div class="masonry-container">
+        <% current_user.reviews.each do |review| %> 
+        <div class="col-md-3 col-sm-4 col-xs-12 blog-unit animatedParent">
+          <div class="article-post animated flipInY">
+            <figure class="visual">
+                  <img src="https://petco.scene7.com/is/image/PETCO/849405-center-1" alt="/">
+                </figure>
+                <h4><%= review.subject %></h4>
+                <div class="post-info">
+                  by <%= current_user.name %> in <%= current_user.location %>  |  <a href="#">5 Comments</a>
+                </div>
+                <p><%= review.body %></a>
+                  <p>Likes: <%= review.vote %></p>
+                  <a class="readmore" href="/reviews/<%=review.id %>">Continue Reading</a>
+                  <%= button_to "Delete", "/reviews/#{review.id}", method: :delete %>
+                  <%= button_to "Edit", "/reviews/#{review.id}/edit", method: :get %>
+          </div><!--post-->
+        </div><!--col--> 
+        <% end %>
+      </div><!--blog-->
     </div>
-    <% end %>
   </div>
-  <% end %>
+
 <% end %>
 
 <h1>All Reviews:</h1>          
-<% @reviews.each_slice(3) do |review_slice| %> 
-  <div class="row">
-    <% review_slice.each do |review| %>
-      <div class="col-md-4">
-        <div class="well">
-          <a href="/reviews/<%= review.id %>"><%= review.subject %></a>
-          <p><%= review.body %></p>
-          <p><%= review.vote %></p>
-            <% if current_user.admin || review.user == current_user %>
-          <%= button_to "Delete", "/reviews/#{review.id}", method: :delete %>
-          <%= button_to "Edit", "/reviews/#{review.id}/edit", method: :get %>
-          <% else %>
-          <% if current_user != review.user %>
-            <%= button_to "Upvote", "/reviews/#{review.id}/upvote" %>
-            <%= button_to "Downvote", "/reviews/#{review.id}/downvote" %>
-          <% end %>
-         <% end %> 
-        </div>
-      </div>
-    <% end %>
+
+  <div class="article blog-masonry">
+    <div class="row">
+      <div class="masonry-container">
+        <% @reviews.each do |review| %> 
+        <div class="col-md-3 col-sm-4 col-xs-12 blog-unit animatedParent">
+          <div class="article-post animated flipInY">
+            <figure class="visual">
+                  <img src="https://images-na.ssl-images-amazon.com/images/I/71vjb4cqeAL._SX355_.jpg" alt="/">
+                </figure>
+                <h4><%= review.subject %></h4>
+                <div class="post-info">
+                  by <%= current_user.name %> in <%= current_user.location %>  |  <a href="#">5 Comments</a>
+                </div>
+                <p><%= review.body %></a>
+                  <p>Likes: <%= review.vote %></p>
+                  <a class="readmore" href="/reviews/<%=review.id %>">Continue Reading</a>
+                  <% if current_user.admin || review.user == current_user %>
+                  <%= button_to "Delete", "/reviews/#{review.id}", method: :delete %>
+                  <%= button_to "Edit", "/reviews/#{review.id}/edit", method: :get %>
+                  <% end %>
+                  <% if current_user != review.user %>
+                  <%= button_to "Upvote", "/reviews/#{review.id}/upvote" %>
+                  <%= button_to "Downvote", "/reviews/#{review.id}/downvote" %>
+                  <% end %>
+          </div><!--post-->
+        </div><!--col--> 
+        <% end %>
+      </div><!--blog-->
+    </div>
   </div>
-<% end %>
+
   

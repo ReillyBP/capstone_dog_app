@@ -1,4 +1,6 @@
-<% if current_user %>
+<% if current_user %> 
+
+<!-- where your code begins - add a current user version of below:-->
   <div class="container">
     <div class="row">
       <h1>Welcome <%= current_user.name%>!</h1>
@@ -20,7 +22,54 @@
     </div>
   </div>
 <% else %>
-  <h2>Welcome!</h2>
+  <section class="custom-slider">
+  <div id="home-slider" class="xv_slider flexslider">
+    <ul class="slides">
+      <li class="xv_slide" data-slideBg="url('https://vetstreet.brightspotcdn.com/dims4/default/d334045/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F66%2Fffb760a8b011e0a0d50050568d634f%2Ffile%2Flabradoodle-2-645mk070411.jpg')" >
+        <div class="flex-caption">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 text-center">
+                <h1 class="fadeInDown animated">Wag and Bone</h1>
+                <!-- <h2 class="fadeInLeft animated slower"></h2> -->
+                <p class="fadeInRight animated slow">Bringing dog lovers together</p>
+                <a href="/users/sign_up" class="btn btn-default bounceInUp animated slow">Sign up now!</a> </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="xv_slide" data-slideBg="url('https://vetstreet.brightspotcdn.com/dims4/default/fb93194/2147483647/thumbnail/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F68%2F1e%2Fc69334fb41ba88aa2a21da3817ba%2FCairn-Terrier-AP-0CLWGZ-645sm101513.jpg')" >
+        <div class="flex-caption">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-md-6 xv-slide-fig">
+                <div class="fadeInUp animated slower"> <a href="http://vimeo.com/51740084" data-rel="prettyPhoto" class="trigger_fancy-video"></a> </div>
+              </div>
+              <div class="col-xs-12 col-md-6">
+                <h1 class="bounceInDown animated slower">Adoption is the Hip Option</h1>
+                <h2 class="fadeInRight animated slower" id="black_font">Let's save them all.</h2>
+                <p class="bounceInLeft animated slowest" id= "black_font">When you adopt a pet from a shelter, you are saving a life.</p>
+                <a href="http://ny.bestfriends.org/get-involved/adopt" class="btn btn-default bounceInUp animated slow">Adopt Now!</a> </div>
+            </div>
+          </div>
+        </div>
+        <li class="xv_slide" data-slideBg="url('http://www.dogbreedslist.info/uploads/allimg/dog-pictures/Jack-Russell-Terrier-2.jpg')" >
+        <div class="flex-caption">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 text-left">
+                <!-- <h1 class="fadeInDown animated">Wag and Bone</h1> -->
+                <!-- <h2 class="fadeInLeft animated slower"></h2> -->
+                <p class="fadeInRight animated slow">Bringing dog lovers together</p>
+                <a href="/users/sign_up" class="btn btn-default bounceInUp animated slow">Sign up now!</a></div>
+            </div>
+          </div>
+        </div>
+      </li>
+      </li>
+    </ul>
+  </div>
+</section>
   <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
   <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
 <% end %>

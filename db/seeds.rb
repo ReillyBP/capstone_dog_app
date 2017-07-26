@@ -13,5 +13,5 @@
 # end
 
 Breed.all.each do |breed|
-  breed.update(image: "https://upload.wikimedia.org/wikipedia/commons/b/bd/Cairn_Terrier.jpg")
+  breed.update(image: "https://vetstreet.brightspotcdn.com/dims4/default/d334045/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F66%2Fffb760a8b011e0a0d50050568d634f%2Ffile%2Flabradoodle-2-645mk070411.jpg")
 end

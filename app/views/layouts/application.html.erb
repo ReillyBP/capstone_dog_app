@@ -16,7 +16,6 @@
 <!--=================================
 Style Sheets
 =================================-->
-<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,600,700' rel='stylesheet' type='text/css'>
 <link href="https://fonts.googleapis.com/css?family=Walter+Turncoat" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
@@ -50,7 +49,7 @@ header
   <nav id="sticktop" class="navbar navbar-default">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/home"><img class="bone" src="./assets/bone.png" alt="/home"></a>
+        <a class="navbar-brand" href="/home"><%= image_tag "bone.png", class: "bone" %></a>
       </div>
         
       <div id="dl-menu" class="xv-menuwrapper responsive-menu">
@@ -117,19 +116,19 @@ Footer
       <div class="row">
         <div class="col-md-4 col-xs-12">
           <!-- where you removed the logo originally -->
-          <p>Life is better with a dog. Don't we all want someone to greet us everyday at the door?</p>
+          <p>Life is better with a dog! Don't we all want someone to greet us everyday at the door?</p>
         </div>
         <!--col-->
         
         <div class="col-md-4 col-xs-12 text-center">
           <h3>WAG and Bone</h3>
-          <a href="#" class="logo-footer"><img class= "paw" src="./assets/paw.png" alt=""/></a>
+          <a href="#" class="logo-footer"><%= image_tag "paw.png", class: "paw" %></a>
         </div>
         <!--col-->
         <!--col-->
         
         <div class="col-md-4 col-xs-12">
-          <h3>contact</h3>
+          <h3>Contact</h3>
           <ul class="contact-info">
             <li><a href="#">
               <i class="livicon" data-name="location" data-onparent="true" data-size="22"></i>

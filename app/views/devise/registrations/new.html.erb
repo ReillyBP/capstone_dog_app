@@ -1,44 +1,63 @@
-<h2>Sign up</h2>
+<section class="page-template">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-9">
+        <div class="row">
+          <div class="col-xs-12 col-sm-6">
+            <h3>Don't have an account?</h3>
+            <p>By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.</p>
+            <a class="btn btn-info" href="#">Create Account</a>
+          </div>
+          <div class=" col-xs-12 col-sm-6">
+            <div class="jumbotron">
+              <h3>Sign Up </h3>
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+              <%= devise_error_messages! %>
+              <div class="field">
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true %>
+              </div>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+              <div class="field">
+                <%= f.label :name %><br />
+                <%= f.text_field :name %>
+              </div>
+              <!-- You added username and location as requirements for signing up -->
+              <div class="field">
+                <%= f.label :username %><br />
+                <%= f.text_field :username %>
+              </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+              <div class="field">
+                <%= f.label :location %><br />
+                <%= f.text_field :location %>
+              </div>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-<!-- You added username and location as requirements for signing up -->
-  <div class="field">
-    <%= f.label :username %><br />
-    <%= f.text_field :username %>
-  </div>
+              <div class="field">
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <%= f.password_field :password, autocomplete: "off" %>
+              </div>
 
-   <div class="field">
-    <%= f.label :location %><br />
-    <%= f.text_field :location %>
-  </div>
+              <div class="field">
+                <%= f.label :password_confirmation %><br />
+                <%= f.password_field :password_confirmation, autocomplete: "off" %>
+              </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
+              <div class="actions">
+                <%= f.submit "Sign up", class: "btn btn-default" %>
+              </div>
+              <small>You can use facebook/ twitter accounts to login</small>
+              <% end %>   
+              <%= render "devise/shared/links" %>
+            </div>
+          </div>    
+        </div>    
+      </div><!--column-products-->
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
+    </div> <!--main row-->   
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+  </section>
 
-<%= render "devise/shared/links" %>

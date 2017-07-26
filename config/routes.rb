@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   post "/reviews/:id/downvote", to: "reviews#downvote"
   resources :reviews
   get "/puppycam", to: "dogs#puppycam"
+  get "/about_us", to: "dogs#about_us"
 end

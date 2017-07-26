@@ -1,11 +1,90 @@
-<div>
-  <h1><%= @breed.name %></h1>
-  <div>
-    <img style="height:300px;" class="img-responsive" src=<%= @breed.image%>>
-  </div>
-  <p><%= @breed.description %></p>
-</div>
 
+<!--=================================
+Page Content
+=================================-->
+
+<div class="portfolio-detail">
+  <div class="container">
+      <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-12">
+              <figure class="visual">
+                  <img class="img-responsive" src=<%= @breed.image%>>
+                </figure>
+                <h4><%= @breed.name %></h4>
+                <ul class="meta-tags">
+                  <li><span>Defining Traits:</span></li>
+                    <li><a href="#">Friendly </a> /</li>
+                    <li><a href="#">Energetic</a> /</li>
+                    <li><a href="#">Plays well with children</a></li>
+                </ul>
+                <div class="border-blue"></div>
+                <div class="folio-info">
+                  <p><%= @breed.description %></p>
+              
+                </div>
+                <div class="border-blue"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--=================================
+Portfolio
+=================================-->
+<section class="portfolio">
+    <div class="container">
+      <h5>Similar Breeds:</h5>
+        <div class="top-nav">
+      <div id="portfolio-prev" class="prev">
+        <span class="livicon" data-name="angle-left" data-onparent="true" data-size="20"></span>
+      </div>
+      <div id="portfolio-next" class="next">
+      <span class="livicon" data-name="angle-right" data-onparent="true" data-size="20"></span>
+      </div>
+    </div>
+        
+        <div id="project-wrapper">
+           
+            <div class="project">
+                <figure>
+                    <img src="./assets/bg.jpg" alt="/">
+                </figure>
+                <div class="hover">
+                  <div class="hover-content">
+                    <a href="#"><span class="livicon" data-name="eye-open" data-onparent="true" data-size="30"></span></a>
+                    <a href="#"><span class="livicon" data-name="share" data-onparent="true" data-size="30"></span></a>
+                  </div>
+              </div>
+            </div><!--project-->
+            
+            <div class="project">
+                <figure>
+                    <img src="./assets/mamadoodle.jpg" alt="/">
+                </figure>
+                <div class="hover">
+                  <div class="hover-content">
+                    <a href="#"><span class="livicon" data-name="eye-open" data-onparent="true" data-size="30"></span></a>
+                    <a href="#"><span class="livicon" data-name="share" data-onparent="true" data-size="30"></span></a>
+                  </div>
+              </div>
+            </div><!--project-->
+            
+            <div class="project">
+                <figure>
+                    <img src="./assets/Frenchie.jpg" alt="/">
+                </figure>
+                <div class="hover">
+                  <div class="hover-content">
+                    <a href="#"><span class="livicon" data-name="eye-open" data-onparent="true" data-size="30"></span></a>
+                    <a href="#"><span class="livicon" data-name="share" data-onparent="true" data-size="30"></span></a>
+                  </div>
+              </div>
+            </div><!--project-->
+    
+              </div>
+            </div><!--project-->
+        </div><!--proj wrapper-->
+    </div><!--container-->
+</section>
 <div>
 <%= button_to "Back to Homepage", "/home", method: :get%> 
 <%= button_to "Back Breed List", "/breeds", method: :get%>

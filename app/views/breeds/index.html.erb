@@ -1,4 +1,35 @@
 <h1>Recognized Dog Breeds:</h1>
-<% @breeds.each do |breed| %>
-<p><a href="/breeds/<%= breed.id%>"><%= breed.name %></a></p>
-<%end %>
+<!-- How do I get these breeds INTO this container? -->
+<section class="portfolio style5">
+  <div class="container">
+        <!-- <ul class="project-filter">
+            <li class="filter" data-filter="*">all</li>
+            <li class="filter" data-filter=".type1">Websites</li>
+            <li class="filter" data-filter=".type2">Print</li>
+            <li class="filter" data-filter=".type3">Mobile</li>
+            <li class="filter" data-filter=".type4">Photography</li>
+            <li class="filter" data-filter=".type5">Illustrations</li>
+            <li class="filter" data-filter=".type6">Logo Design</li>
+        </ul> -->
+    
+        <div id="Grid" class="project-wrapper projects">
+        <% @breeds.each do |breed| %>
+        <div class="project type1">
+            <figure>
+                <%= image_tag breed.image %>
+                <%= breed.name %>
+            </figure>
+            <div class="hover">
+                  <div class="hover-content">
+                    <a href="/breeds/<%= breed.id%>"><span class="livicon" data-name="eye-open" data-onparent="true" data-size="30"></span></a>
+                    <a href="/breeds/<%= breed.id%>"><span class="livicon" data-name="share" data-onparent="true" data-size="30"></span></a>
+                  </div>
+             </div>
+         </div><!--project-->
+        <% end %>
+
+         </div>
+         <div class="clearfix"></div>
+
+    </div>
+</section>

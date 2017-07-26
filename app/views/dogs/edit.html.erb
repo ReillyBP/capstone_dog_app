@@ -1,4 +1,5 @@
 <h1>Edit Info </h1>
+
 <%= form_tag "/dogs/#{@dog.id}", method: :patch do %>
 <div>Name: <input type= "text" value= "<%= @dog.name %>" name="name_param"></div>
 <div>Breed: <input type="text" value="<%= @dog.breed %>" name="breed_param"></div>
@@ -10,3 +11,15 @@
 <input type= "submit" value="Update">
 <%end%>
 <%= link_to "Back to Homepage", "/home", method: :get%> 
+
+
+                 <!-- <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12"> --> 
+                 <!-- <form>
+                  <h4>say hello!</h4>
+                    <h5>Name:</h5><input>
+                    <h5>Email:</h5><input>
+                    <h5>Phone:</h5><input>
+                    <h5>Message:</h5><textarea></textarea>
+                    <button class="btn">Submit</button>
+                    </form>
+                </div> -->

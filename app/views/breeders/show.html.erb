@@ -1,8 +1,33 @@
-<h1><%= @breeder.name %></h1>
-<p>Location: <%= @breeder.location %></p>
-<p>Price Range: <%= @breeder.price %></p>
-<p>Delivery: <%= @breeder.delivery %></p>
-<p>Delivery Options: <%= @breeder.delivery_type%></p>
-<p>Past Litters: <%= @breeder.past_litters %></p>
-<%= button_to "Back to home", "/home", method: :get %>
-<%= button_to "Edit", "/breeders/#{@breeder.id}/edit", method: :get %>
+<div class="portfolio-detail">
+  <div class="container">
+      <div class="row">
+            <div class="col-md-10 col-md-offset-1 col-xs-12">
+              <figure class="visual">
+                  <img class="img-responsive breeder-img" src="https://vetstreet.brightspotcdn.com/dims4/default/d334045/2147483647/crop/0x0%2B0%2B0/resize/645x380/quality/90/?url=https%3A%2F%2Fvetstreet-brightspot.s3.amazonaws.com%2F66%2Fffb760a8b011e0a0d50050568d634f%2Ffile%2Flabradoodle-2-645mk070411.jpg">
+                </figure>
+                
+                
+                <!-- <div class="border-blue"></div> -->
+                <div class="folio-info text-center">
+                  <h1><%= @breeder.name %></h1>
+                  <p>Location: <%= @breeder.location %></p>
+                  <p>Price Range: <%= @breeder.price %></p>
+                  <p>Delivery: <%= @breeder.delivery %></p>
+                  <p>Delivery Options: <%= @breeder.delivery_type%></p>
+                  <p>Past Litters: <%= @breeder.past_litters %></p>
+              
+                </div>
+                <div class="border-blue center-stuff"></div>
+                <ul class="meta-tags text-center">
+                  <li><span>Similar Breeders:</span></li>
+                  <li><a href="#">New York </a> /</li>
+                  <li><a href="#">New Jeresey</a> /</li>
+                  <li><a href="#">Connecticut</a></li>
+                </ul>
+                <%= button_to "Back to home", "/home", class: "center-stuff", method: :get %>
+                <%= button_to "Edit", "/breeders/#{@breeder.id}/edit", class: "center-stuff", method: :get %>
+            </div>
+        </div>
+    </div>
+</div>
+
