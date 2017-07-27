@@ -1,4 +1,7 @@
 <h1>Live Puppy Cam!</h1>
 <p>Puppies roaming about, happening <em>NOW!</em></p>
 
-<iframe width="560" height="315" src="<%= @video_link %>?autoplay=1" frameborder="0" allowfullscreen></iframe>
+<iframe width="1012" height="630" src="<%= @video_link %>?autoplay=1" frameborder="0" allowfullscreen></iframe>
+
+<%= button_to "Another Puppy Cam", "/puppycam", method: :get%>
+<%= button_to "Back to Homepage", "/home", method: :get%>

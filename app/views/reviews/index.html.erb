@@ -44,7 +44,7 @@
                 </figure>
                 <h4><%= review.subject %></h4>
                 <div class="post-info">
-                  by <%= current_user.name %> in <%= current_user.location %>  |  <a href="#">5 Comments</a>
+                  by <%= review.user.name %> in <%= review.user.location %>  |  <a href="#">5 Comments</a>
                 </div>
                 <p><%= review.body %></a>
                   <p>Likes: <%= review.vote %></p>
